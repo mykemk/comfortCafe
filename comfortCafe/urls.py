@@ -7,5 +7,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',pizza.views.home,name='home'),
     path('order',pizza.views.order,name='order'),
-    path('pizzas', pizza.views.pizzas,name='pizzas')
+    path('pizzas', pizza.views.pizzas,name='pizzas'),
+    path('order/<int:pk>', pizza.views.edit_order,name='edit_order')
+    
 ]
