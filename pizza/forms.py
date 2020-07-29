@@ -10,4 +10,10 @@ class PizzaForm(forms.ModelForm):
     class Meta:
         model = Pizza
         fields = ['topping1', 'topping2', 'size']
-        labels = ['Topping 1', 'Topping 2', 'Size']
+        labels = {'topping1':'Topping 1', 'tooping2':'Topping 2'}
+        
+        
+class MultipleForm(forms.Form):
+    
+    number = forms.IntegerField(min_value=2,max_value=6)
+    
