@@ -1,2 +1,7 @@
-<h1>Hey! welcome to comfort cafe</h1>
-<a href="{% url 'order' %}">Order pizza now</a>
+{% extends 'pizza/base.html' %}
+{% block 'body' %}
+<div class="text-center">
+  {% load static %}
+  <img src="{% static 'nandiasgarden.jpg' %}" class="img-fluid" alt="Nandia's Garden">
+</div>
+{% endblock %}
